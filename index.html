@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head >
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBm-KooNXAjmZSU0hBf4svjI65R3Xpd_QI",
+    authDomain: "chatapp-d3f5f.firebaseapp.com",
+    databaseURL: "https://chatapp-d3f5f.firebaseio.com",
+    projectId: "chatapp-d3f5f",
+    storageBucket: "",
+    messagingSenderId: "69171976122"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="assests/style.css">
+<script src="controller.js"></script>
+</head>
+
+
+<body ng-app="chatApp"  ng-controller="myCtrl">
+
+	<!--
+    Firebase is a powerful API to store and sync data  in realtime.
+    In AngularJS official website, use Firebase library as server to show how built-in services works.
+    * [URL](https://www.firebase.com/)
+    * [Tutorial](https://www.firebase.com/tutorial/#tutorial)
+    * [Docs & API](https://www.firebase.com/docs/)
+-->
+<div id="msgList"></div>
+
+	<form action="">
+	<label for="">
+		Name: <input type="text" id="nameIpt" placeholder="Name">
+	</label>
+	<label for="">
+		Message: <input type="text" id="msgIpt" placeholder="Message" value="" autofocus>
+	</label>
+	<input type="button" id="btnSubmit" value="submit">
+</form>
+
+
+
+
+<div >
+
+  {{products}}
+
+</div>
+
+</body>
+</html>
