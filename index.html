@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head >
+<!-- Jquery and Angular -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>
+<script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
 <script>
   // Initialize Firebase
@@ -16,23 +21,13 @@
   firebase.initializeApp(config);
 </script>
 
-<!-- AngularFire -->
-<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
-
+<!-- Others -->
 <link rel="stylesheet" type="text/css" href="assests/style.css">
 <script src="controller.js"></script>
 </head>
 
 
 <body ng-app="chatApp"  ng-controller="myCtrl">
-
-	<!--
-    Firebase is a powerful API to store and sync data  in realtime.
-    In AngularJS official website, use Firebase library as server to show how built-in services works.
-    * [URL](https://www.firebase.com/)
-    * [Tutorial](https://www.firebase.com/tutorial/#tutorial)
-    * [Docs & API](https://www.firebase.com/docs/)
--->
 <div id="msgList"></div>
 
 	<form action="">
@@ -42,17 +37,9 @@
 	<label for="">
 		Message: <input type="text" id="msgIpt" placeholder="Message" value="" autofocus>
 	</label>
-	<input type="button" id="btnSubmit" value="submit">
+	<input type="button" id="btnSubmit" value="submit" ng-click="submit()">
 </form>
 
-
-
-
-<div >
-
-  {{products}}
-
-</div>
 
 </body>
 </html>

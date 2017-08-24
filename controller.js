@@ -1,17 +1,16 @@
-var app = angular.module("chatApp", []); 
+var app = angular.module("chatApp", ['firebase']); 
 app.controller("myCtrl",myCtrl)
-	myCtrl.$inject =['$scope', '$firebaseObject']
+	myCtrl.$inject =['$scope']
 
-	function myCtrl($scope, $firebaseObject) {
-	var myDataRef = firebase.database().ref();
+	function myCtrl($scope) {
+var myDataRef = new Firebase("https://chatapp-d3f5f.firebaseio.com");
 
 	$scope.submit = function (){
-		$('#btnSubmit').click(function() {
+
         var u = $('#nameIpt').val();
         var m = $('#msgIpt').val();
         myDataRef.push({name: u, text: m});
         $('#msgIpt').val('');
-      });
 	}
 
 	    myDataRef.on('child_added', function(snapshot) {
@@ -25,7 +24,7 @@ app.controller("myCtrl",myCtrl)
         $('#msgList')[0].scrollTop = $('#msgList')[0].scrollHeight;
       };
 
-    $scope.products = ["Milk", "Bread", "Cheese"];
+
 
 
 }
