@@ -1,15 +1,17 @@
 var app = angular.module("chatApp", ['firebase']); 
-app.controller("myCtrl",myCtrl)
-	myCtrl.$inject =['$scope']
+app.controller("myCtrl",myCtrl);
 
-	function myCtrl($scope) {
-var myDataRef = new Firebase("https://chatapp-d3f5f.firebaseio.com");
+
+myCtrl.$inject =['$scope', '$location', '$log'];
+
+	function myCtrl($scope, $location, $log) {
+  var myDataRef = new Firebase("https://chatapp-d3f5f.firebaseio.com");
+  $scope.userName = $location.search().name;
 
 	$scope.submit = function (){
 
-        var u = $('#nameIpt').val();
         var m = $('#msgIpt').val();
-        myDataRef.push({name: u, text: m});
+        myDataRef.push({name: $scope.userName, text: m});
         $('#msgIpt').val('');
 	}
 
