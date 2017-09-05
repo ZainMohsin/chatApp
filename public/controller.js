@@ -7,7 +7,7 @@ myCtrl.$inject =['$scope', '$location', '$log'];
 	function myCtrl($scope, $location, $log) {
   var myDataRef = new Firebase("https://chatapp-d3f5f.firebaseio.com");
   $scope.userName = $location.search().name;
-
+  $scope.appName = "ChatApp";
 	$scope.submit = function (){
 
         var m = $('#msgIpt').val();
