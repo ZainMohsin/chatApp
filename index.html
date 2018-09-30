@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head >
+  <title>chatApp</title>
 <!-- Jquery and Angular -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -29,17 +30,21 @@
 </head>
 
 
-<body ng-app="chatApp"  ng-controller="myCtrl" >
+<body ng-app="chatApp"  ng-controller="chatApp" >
   <div>{{appName}}</div>
 <div id="msgList" class="w3-container" style="width: auto; height: 80vh"></div>
 
 	<form action="">
+    
 	<label for="">
 		<input type="text" id="msgIpt" placeholder="Type & Enter" value="" autofocus ng-model="msg" class="w3-border w3-round-large">
 	</label>
-	<button type="submit" id="btnSubmit" ng-click="submit()" ng-disabled="!msg" class="w3-button w3-circle w3-red w3-card-1 w3-mobile"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
-</form>
+  
+  <button type="submit" id="btnSubmit" ng-click="submit()" ng-disabled="!msg" class="w3-button w3-circle w3-red w3-card-1 w3-mobile">
+    <i class="fa fa-paper-plane" aria-hidden="true"></i>
+  </button>
 
+</form>
 
 </body>
 </html>
