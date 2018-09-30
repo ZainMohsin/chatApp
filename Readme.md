@@ -1,7 +1,7 @@
 # CHATAPP
 ChatApp is a simplest AngularJs based real-time chat application. It uses Firebase Real-time database to store and retireve messages.
 
-##Getting Started
+## Getting Started
 Just clone the repo and start using the app. However you can always extend it to meet your unique requirements.
 
 ## Open source liberaries used
