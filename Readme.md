@@ -14,7 +14,7 @@ The following liberaries have been used for developing ChatApp:
 ### ```Index.html```
 Mostly contains the script tags for included liberaries and then container for showing the messages in DOM. It behaves as the view of our Single Page Application.
 
-###```controller.js```
+### ```controller.js```
 As it's name suggests, it is the sole controller of our app. Note on the part where ```'firebase'``` is injected as dependency in controller. This is an important part.
 First thing we do in controller declaration, is we make a refference of our Firebase DB as ```myDataRef.```
 ```$scope.userName``` get's the name of user to be used in chat. It is retrieved from the query parameter. So whenever you host the app, you'll have to have a ```name``` parameter in the query-url.
